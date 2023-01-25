@@ -1,0 +1,10 @@
+:root {
+  --app-width: 56.25rem;
+  --max-app-width: var(--app-width);
+}
+
+.App {
+  width: var(--app-width);
+  max-width: var(--max-app-width);
+  padding-top: 2rem;
+}

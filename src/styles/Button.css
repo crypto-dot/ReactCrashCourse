@@ -1,0 +1,14 @@
+.btn {
+    border-radius: .5rem;
+    border: transparent;
+    width: 10rem;
+    height: 3rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+    border: rgb(167, 167, 167) 1px solid;
+}
