@@ -1,3 +1,60 @@
-.section__task {
+.section__task,
+.section__task--saved {
     padding: 1rem;
+    background-color: rgb(136, 136, 136);
+    border-radius: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 3rem;
+    cursor: pointer;
+}
+
+.section__task--saved {
+    border-left: 5px solid green;
+}
+
+.section__task:focus,
+.section__task:hover {
+    background-color: rgb(161, 160, 160);
+}
+
+.block__taskBottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.block__buttons {
+    width: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.svg__edit,
+.svg__closeOutline {
+    transform: scale(1.2);
+}
+
+.svg__edit {
+    color: rgb(0, 255, 200);
+}
+
+.svg__edit:hover,
+.svg__edit:focus {
+    color: rgb(71, 208, 178);
+}
+
+.svg__closeOutline {
+    color: rgb(252, 17, 17);
+}
+
+.svg__closeOutline:hover,
+.svg__closeOutline:focus {
+    color: rgb(174, 22, 22);
+}
+
+.btn__svg {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }

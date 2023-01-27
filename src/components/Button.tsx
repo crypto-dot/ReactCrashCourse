@@ -8,7 +8,7 @@ const Button = (props: { color: string; text: string }) => {
 }
 
 Button.defaultProps = {
-    color: "black",
+    color: "rgb(136, 136, 136)",
     text: "Add a Task"
 }
 

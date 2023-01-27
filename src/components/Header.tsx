@@ -1,7 +1,7 @@
 import "../styles/Header.css"
 import Button from "./Button"
 
-const Header = (props: { title: string }) => {
+const Header = (props: { title: String }) => {
     return (
         <header className="header__main">
             <h1 className="h1__headerMain">

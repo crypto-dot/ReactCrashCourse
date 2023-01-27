@@ -10,5 +10,6 @@
 
 .btn:hover,
 .btn:focus {
-    border: rgb(167, 167, 167) 1px solid;
+    border: rgb(207, 207, 207) 3px solid;
+    border-radius: .5rem;
 }
