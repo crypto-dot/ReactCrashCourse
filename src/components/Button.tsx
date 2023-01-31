@@ -12,4 +12,4 @@ Button.defaultProps = {
     text: "Add a Task"
 }
 
-export default Button
+export default Button;

@@ -1,5 +1,5 @@
-.section__task,
-.section__task--saved {
+.block__task,
+.block__task--saved {
     padding: 1rem;
     background-color: rgb(136, 136, 136);
     border-radius: .3rem;
@@ -10,12 +10,12 @@
     cursor: pointer;
 }
 
-.section__task--saved {
+.block__task--saved {
     border-left: 5px solid green;
 }
 
-.section__task:focus,
-.section__task:hover {
+.block__task:focus,
+.block__task:hover {
     background-color: rgb(161, 160, 160);
 }
 
@@ -57,4 +57,19 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+}
+
+.input__taskTitle {
+
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    background-color: #242424;
+    border-radius: .3rem;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
 }
