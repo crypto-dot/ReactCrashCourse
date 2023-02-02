@@ -56,6 +56,10 @@ function App() {
     const target = e.target as HTMLInputElement;
     setTasks(tasks.map(task => { return task.id === id ? { ...task, desc: target.value } : task }));
   }
+  const addNewTask = (title: string, desc: string) => {
+    const id: number = tasks.length;
+    setTasks([...tasks, { id: id, title: title, desc: desc }])
+  }
   return (
     <div className="App">
       <Header />

@@ -60,7 +60,7 @@
 }
 
 .input__taskTitle {
-    padding-left: .5rem;
+    padding: 1rem 0 1rem 1rem;
     font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
     font-size: 1.5rem;
     line-height: 1.5rem;
@@ -88,4 +88,21 @@
     display: flex;
     gap: .5rem;
     flex-direction: column;
+    padding-right: 2rem;
+}
+
+@media (max-width:600px) {
+    .h1__task {
+        font-size: 1rem;
+    }
+
+    .input__taskTitle {
+        font-size: 1rem;
+        padding: .25rem;
+    }
+
+    .svg__edit,
+    .svg__closeOutline {
+        transform: scale(1);
+    }
 }

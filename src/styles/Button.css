@@ -13,3 +13,9 @@
     border: rgb(207, 207, 207) 3px solid;
     border-radius: .5rem;
 }
+
+@media (max-width:600px) {
+    .btn {
+        font-size: .9rem;
+    }
+}

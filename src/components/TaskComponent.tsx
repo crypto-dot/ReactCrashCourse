@@ -35,7 +35,7 @@ const TaskComponent = (props: { title: string, desc: string, id: number, saved: 
                     "block__task"} onClick={handleTaskClick}>
                     <section className="section__TaskInfo">
                         <input className="input__taskTitle" type="text" defaultValue={props.title} onChange={(e) => props.setTitle(e, props.id)} onClick={(e) => e.stopPropagation()} />
-                        <input className="input__taskTitle" type="text" defaultValue={props.desc ? props.desc : "Description"} onChange={(e) => props.setDesc(e, props.id)} onClick={(e) => e.stopPropagation()} />
+                        <textarea className="input__taskTitle" defaultValue={props.desc ? props.desc : "Description"} onChange={(e) => props.setDesc(e, props.id)} onClick={(e) => e.stopPropagation()} />
                     </section>
                     <div className="block__buttons">
                         <button className="btn__svg">

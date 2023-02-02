@@ -19,6 +19,10 @@
   margin: 0;
 }
 
+body {
+  position: relative;
+}
+
 #root {
   min-width: 100vw;
   display: flex;
