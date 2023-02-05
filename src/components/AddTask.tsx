@@ -13,8 +13,8 @@ const AddTask = (props: { show: boolean, onClick: MouseEventHandler, addNewTask:
 
     const [task, setTask] = useState<Task>(DEFAULT_TASK);
 
-    const titleDOM = useRef(null);
-    const descDOM = useRef(null);
+    const titleDOM = useRef<HTMLInputElement>(null);
+    const descDOM = useRef<HTMLTextAreaElement>(null);
 
     const handleFormSubmit = (e: FormEvent<HTMLFormElement>): void => {
         e.preventDefault();
@@ -26,8 +26,10 @@ const AddTask = (props: { show: boolean, onClick: MouseEventHandler, addNewTask:
     }
 
     const formComplete = (): void => {
-        titleDOM.current.value = "";
-        descDOM.current.value = "";
+        if (titleDOM.current && descDOM.current) {
+            titleDOM.current.value = "";
+            descDOM.current.value = "";
+        }
         setTask(DEFAULT_TASK);
     }
 
