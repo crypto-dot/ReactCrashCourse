@@ -3,7 +3,7 @@ import Header from './components/Header'
 import './App.css'
 import Tasks from './components/Tasks';
 export interface Task {
-  id: number,
+  id?: number,
   title: string,
   desc: string,
   saved: boolean
@@ -36,33 +36,36 @@ function App() {
     }
   ]);
 
-  const onDelete = (id: number) => {
+  const onDelete = (id: number): void => {
     setTasks(tasks.filter(task => task.id !== id));
   }
 
-  const setSaved = (id: number) => {
+  const setSaved = (id: number): void => {
     setTasks(tasks.map(task => {
       return task.id === id ? { ...task, saved: !task.saved } : task
     }));
   }
-  const setTitle = (e: React.ChangeEvent<HTMLInputElement>, id: number) => {
+
+  const setTitle = (e: React.ChangeEvent<HTMLInputElement>, id: number): void => {
     e.stopPropagation();
     const target = e.target as HTMLInputElement;
     const inputTitle = target.value === "" ? "Default Title" : target.value;
     setTasks(tasks.map(task => { return task.id === id ? { ...task, title: inputTitle } : task }));
   }
-  const setDesc = (e: React.ChangeEvent<HTMLInputElement>, id: number) => {
+
+  const setDesc = (e: React.ChangeEvent<HTMLInputElement>, id: number): void => {
     e.stopPropagation();
     const target = e.target as HTMLInputElement;
     setTasks(tasks.map(task => { return task.id === id ? { ...task, desc: target.value } : task }));
   }
-  const addNewTask = (title: string, desc: string) => {
-    const id: number = tasks.length;
-    setTasks([...tasks, { id: id, title: title, desc: desc }])
+
+  const addNewTask = (newTask: Task): void => {
+    setTasks([...tasks, { ...newTask, id: tasks.length + 1 }]);
   }
+
   return (
     <div className="App">
-      <Header />
+      <Header addNewTask={addNewTask} />
       <Tasks tasks={tasks} setSaved={setSaved} onDelete={onDelete} setTitle={setTitle} setDesc={setDesc} />
     </div>
   )

@@ -2,9 +2,9 @@ import "../styles/Header.css"
 import Button from "./Button"
 import React, { useState } from "react";
 import AddTask from "./AddTask";
-const Header = (props: { title: String }) => {
+const Header = (props: { title: String, addNewTask: Function }) => {
     const [show, setShow] = useState(false);
-    const handleOnClick = (e: React.MouseEvent) => {
+    const handleOnClick = (e: React.MouseEvent): void => {
         setShow(!show);
     }
     return (
@@ -13,7 +13,7 @@ const Header = (props: { title: String }) => {
                 {props.title}
             </h1>
             <Button onClick={handleOnClick} />
-            <AddTask show={show} onClick={handleOnClick} />
+            <AddTask show={show} onClick={handleOnClick} addNewTask={props.addNewTask} />
         </header>
     )
 }

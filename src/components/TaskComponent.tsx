@@ -3,14 +3,14 @@ import "../styles/TaskComponent.css";
 import React, { useState } from "react";
 const TaskComponent = (props: { title: string, desc: string, id: number, saved: boolean, onDelete: Function, setSaved: Function, setTitle: Function, setDesc: Function }) => {
     const [edit, setEdit] = useState(false);
-    const handleTaskClick = (e: React.MouseEvent) => {
+    const handleTaskClick = (e: React.MouseEvent): void => {
         props.setSaved(props.id);
     }
-    const handleExitClick = (e: React.MouseEvent) => {
+    const handleExitClick = (e: React.MouseEvent): void => {
         e.stopPropagation();
         props.onDelete(props.id);
     }
-    const handleEditClick = (e: React.MouseEvent) => {
+    const handleEditClick = (e: React.MouseEvent): void => {
         e.stopPropagation();
         setEdit(!edit);
     }
